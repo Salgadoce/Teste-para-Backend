@@ -32,10 +32,6 @@ public class TicketController {
     
     @PostMapping("/Post")
     public TICKET criarTicket(@RequestBody TICKET ticket) {
-    	 System.out.println("TITLE: " + ticket.getTitle());
-    	 System.out.println("OpeningDate: " + ticket.getOpeningDate());
-    	 System.out.println("cliente:"+ticket.getCliente());
-    	
         return ticketService.criarTicket(ticket);
     }
 }
